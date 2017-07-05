@@ -48,4 +48,7 @@
       <sca:interface.wsdl xmi:id="_aSpf4WB-EeeuL9GFFVgdQQ" interface="http://xmlns.example.com/20170704020144PLT#wsdl.interface(customer)"/>
     </sca:service>
   </sca:component>
+  <sca:component xmi:id="_RO3BwGFbEeeJr9W980jQ1Q" name="ComponentActivator" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_RO3BwWFbEeeJr9W980jQ1Q" processName="customerservice.module.Activator"/>
+  </sca:component>
 </sca:composite>

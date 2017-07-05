@@ -513,7 +513,7 @@
                                     <type href="http://ns.tibco.com/bw/palette/jdbc#//JDBCQueryActivity"/>
                                     <value maxRows="100"
                                     sharedResourceProperty="jdbcProperty"
-                                    sqlStatement="SELECT *&#xa;  FROM public.&quot;Customer&quot;&#xa;  WHERE id = ?&#xa;"
+                                    sqlStatement="SELECT *&#xa;  FROM public.&quot;customers&quot;&#xa;  WHERE id = ?&#xa;"
                                     timeout="10" xsi:type="jdbcPalette:JDBCQueryActivity">
                                     <PreparedParameters DataType="4"
                                     DataTypeDisplayValue="INTEGER" ParameterName="id"/>

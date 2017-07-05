@@ -67,7 +67,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//CustomerService.module//DB_URL</name>
-			<value>jdbc:postgresql://bwce-customer.czbcxdkopv3u.ap-south-1.rds.amazonaws.com:5432/CustomerDB</value>
+			<value>jdbc:postgresql://bwce-customer.czbcxdkopv3u.ap-south-1.rds.amazonaws.com:5432/customer</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
