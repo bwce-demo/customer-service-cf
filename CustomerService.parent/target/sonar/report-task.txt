@@ -1,5 +1,0 @@
-projectKey=com.tibco.bw:CustomerService.parent
-serverUrl=http://localhost:9000
-dashboardUrl=http://localhost:9000/dashboard/index/com.tibco.bw:CustomerService.parent
-ceTaskId=AV0q-JXNVzeJOC9AjE9Q
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AV0q-JXNVzeJOC9AjE9Q
