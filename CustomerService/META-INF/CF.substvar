@@ -64,11 +64,11 @@
 			<type>Password</type>
 			<isOverride>true</isOverride>
 			<useLookupValue>true</useLookupValue>
-			<lookupValue>#DB_PASS#</lookupValue>
+			<lookupValue>#customer-db.credentials.password#</lookupValue>
 		</globalVariable>
 		<globalVariable>
 			<name>//CustomerService.module//DB_URL</name>
-			<value>#DB_URL#</value>
+			<value>#customer-db.credentials.url#</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
@@ -76,7 +76,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//CustomerService.module//DB_USER</name>
-			<value>#DB_USER#</value>
+			<value>#customer-db.credentials.username#</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>

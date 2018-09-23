@@ -6,19 +6,24 @@
     <groupId>com.tibco.bw</groupId>
     <artifactId>CustomerService.parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <relativePath>../CustomerService.parent</relativePath>
+    <relativePath>..\CustomerService.parent</relativePath>
   </parent>
   <artifactId>CustomerService</artifactId>
   <packaging>bwear</packaging>
   <properties>
+    <skipTests>false</skipTests>
     <pcf.property.file>pcfdev.properties</pcf.property.file>
+    <bw.Home>/bwce/2.4</bw.Home>
+    <project.type>PCF</project.type>
+    <failIfNoTests>false</failIfNoTests>
+    <tibco.Home>/home/tibco/bwce</tibco.Home>
   </properties>
   <build>
     <plugins>
       <plugin>
         <groupId>com.tibco.plugins</groupId>
         <artifactId>bw6-maven-plugin</artifactId>
-        <version>1.2.2</version>
+        <version>2.0.0</version>
         <extensions>true</extensions>
       </plugin>
       <plugin>
@@ -56,15 +61,12 @@
           <memory>${bwpcf.memory}</memory>
           <buildpack>${bwpcf.buildpack}</buildpack>
           <env>
-            <APP_CONFIG_PROFILE>${bwpcf.env.0}</APP_CONFIG_PROFILE>
-            <BW_LOGLEVEL>${bwpcf.env.1}</BW_LOGLEVEL>
-            <BW_PROFILE>${bwpcf.env.2}</BW_PROFILE>
-            <CF_TARGET>${bwpcf.env.3}</CF_TARGET>
+            <BW_PROFILE>${bwpcf.env.0}</BW_PROFILE>
           </env>
           <services>
             <service>
-              <name>scs-circuit-breaker</name>
-              <label>p-circuit-breaker-dashboard</label>
+              <name>app-autoscaler</name>
+              <label>app-autoscaler</label>
               <version></version>
               <plan>standard</plan>
             </service>
@@ -75,14 +77,35 @@
               <plan>standard</plan>
             </service>
             <service>
-              <name>scs-config-server</name>
-              <label>p-config-server</label>
+              <name>scs-circuit-breaker</name>
+              <label>p-circuit-breaker-dashboard</label>
               <version></version>
               <plan>standard</plan>
+            </service>
+            <service>
+              <name>bw-mon-service</name>
+              <label></label>
+              <version></version>
+              <plan></plan>
+            </service>
+            <service>
+              <name>customer-db</name>
+              <label></label>
+              <version></version>
+              <plan></plan>
             </service>
           </services>
         </configuration>
       </plugin>
     </plugins>
   </build>
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>com.tibco.plugins</groupId>
+        <artifactId>bw6-maven-plugin</artifactId>
+        <version>2.0.0</version>
+      </plugin>
+    </plugins>
+  </reporting>
 </project>

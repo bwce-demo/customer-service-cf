@@ -159,6 +159,17 @@
                 </complexContent>
             </complexType>
             <element name="ActivityTimedOutException" type="tns:ActivityTimedOutExceptionType"/>
+            <complexType name="DuplicateKeyExceptionType">
+                <complexContent>
+                    <extension base="tns:ActivityExceptionType">
+                        <sequence>
+                            <element name="duplicateKey" type="string"/>
+                            <element minOccurs="0" name="previousJobID" type="string"/>
+                        </sequence>
+                    </extension>
+                </complexContent>
+            </complexType>
+            <element name="DuplicateKeyException" type="tns:DuplicateKeyExceptionType"/>
         </schema>
         <wsdl:definitions
             targetNamespace="http://xmlns.example.com/20170703234528PLT"
@@ -219,7 +230,7 @@
             <wsdl:portType name="customer-accountdetails"
                 tibex:bw.rest.apipath="/customer/{id}/accountdetails"
                 tibex:bw.rest.basepath="CustomerAccountDetails"
-                tibex:bw.rest.resource="Service Descriptors/customerservice.module.Process-CustomerAccountDetails.json"
+                tibex:bw.rest.resource="Service Descriptors/customerservice.module.CustomerAccount-CustomerAccountDetails.json"
                 tibex:bw.rest.resource.source="generated" tibex:source="bw.rest.service">
                 <wsdl:documentation>Summary about the new REST service.</wsdl:documentation>
                 <wsdl:operation name="get">
@@ -836,6 +847,7 @@
                                     <parameterMapping parameterName="id"
                                     parameterType="Path" required="true"/>
                                 </parameters>
+                                <advancedConfig blockingQueueSize="2147483647"/>
                             </scaext:binding>
                         </referenceBinding>
                     </bwbinding:BWBaseBinding>
@@ -904,7 +916,7 @@
                                     inputVariable="GetCustomerDetails-input"
                                     name="GetCustomerDetails"
                                     outputVariable="GetCustomerDetails"
-                                    tibex:xpdlId="a0eb0d77-be0d-49fb-bcc0-60d6bf90aa13"
+                                    tibex:xpdlId="c8be37d7-65bd-48a8-ae20-d3329bfa8e42"
                                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                                     <bpws:sources>
                                     <bpws:source linkName="GetCustomerDetailsToget"/>

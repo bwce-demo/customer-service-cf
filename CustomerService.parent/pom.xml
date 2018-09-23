@@ -7,11 +7,15 @@
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
-    <module>../CustomerService.module</module>
-    <module>../CustomerService</module>
+    <module>..\CustomerService.module</module>
+    <module>..\CustomerService</module>
   </modules>
   <build>
     <plugins>
+      <plugin>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.7.1</version>
+      </plugin>
       <plugin>
         <groupId>org.cloudfoundry</groupId>
         <artifactId>cf-maven-plugin</artifactId>
