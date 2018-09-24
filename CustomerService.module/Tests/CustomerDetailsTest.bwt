@@ -9,7 +9,7 @@
 &lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JDBCQuery&quot;/>&lt;xsl:template name=&quot;&quot; match=&quot;/&quot;>&lt;Primitive-Assertion>&lt;AssertType>&lt;int>&lt;testInput>&lt;xsl:value-of select=&quot;$JDBCQuery/Record[1]/account_id&quot;/>&lt;/testInput>&lt;goldInput>&lt;xsl:value-of select=&quot;16796&quot;/>&lt;/goldInput>&lt;/int>&lt;/AssertType>&lt;/Primitive-Assertion>&lt;/xsl:template>&lt;/xsl:stylesheet></OriginalExpression>
     </Assertion>
     <Operation Name="callProcess" serviceName="customerservice.module.db.GetCutomerDetails">
-      <Inputs Id="5318ca14-7a1b-4d64-9241-30b2ffa4d7d0CustomerService.module_customerservice.module.db.GetCutomerDetails_callProcess_Start" Name="Start" isDefault="true" type="CALLPROCESS">
+      <Inputs Id="6242069a-8f98-4bb6-babc-400b590e9eedCustomerService.module_customerservice.module.db.GetCutomerDetails_callProcess_Start" Name="Start" isDefault="true" type="CALLPROCESS">
         <informations Name="input" nameSpace="http://xmlns.example.com/CustomerAccountDetails/parameters">
           <nameSpaces prefix="tns" nameSapce="http://xmlns.example.com/CustomerAccountDetails/parameters"/>
           <Parameter Name="tns:customer-accountdetailsGetParameters">
