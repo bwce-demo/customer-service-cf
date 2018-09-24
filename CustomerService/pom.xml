@@ -11,7 +11,7 @@
   <artifactId>CustomerService</artifactId>
   <packaging>bwear</packaging>
   <properties>
-    <skipTests>false</skipTests>
+    <skipTests>true</skipTests>
     <pcf.property.file>pcfdev.properties</pcf.property.file>
     <bw.Home>/bwce/2.4</bw.Home>
     <project.type>PCF</project.type>
