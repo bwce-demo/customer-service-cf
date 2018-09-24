@@ -60,6 +60,7 @@
           <skip>false</skip>
           <memory>${bwpcf.memory}</memory>
           <buildpack>${bwpcf.buildpack}</buildpack>
+          <healthCheckTimeout>180</healthCheckTimeout>
           <env>
             <APP_CONFIG_PROFILE>${bwpcf.env.0}</APP_CONFIG_PROFILE>
             <BW_PROFILE>${bwpcf.env.1}</BW_PROFILE>
