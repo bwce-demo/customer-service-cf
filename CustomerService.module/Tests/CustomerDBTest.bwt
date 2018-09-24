@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<emulation:EmulationData xmlns:emulation="http:///emulation.ecore" isBW="true" location="/CustomerService.module/Tests/CustomerDetailsTest.bwt">
+<emulation:EmulationData xmlns:emulation="http:///emulation.ecore" isBW="true" location="/CustomerService.module/Tests/CustomerDBTest.bwt">
   <ProcessNode Id="customerservice.module.db.GetCutomerDetails" Name="customerservice.module.db.GetCutomerDetails" ModelType="BW" moduleName="CustomerService.module">
     <Assertion Id="95b2cf5f-d05e-421b-b4cd-15f02b0c65f6" Name="JDBCQuery" hasDecoration="true">
       <Lang>urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0</Lang>
